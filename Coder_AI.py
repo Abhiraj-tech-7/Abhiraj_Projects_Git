@@ -3,8 +3,8 @@ import pandas as pd
 from huggingface_hub import InferenceClient
 from pypdf import PdfReader
 import re
-HF_TOKEN_Ex="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"
-model_name1="Qwen/Qwen2.5-Coder-32B-Instruct"
+HF_TOKEN_Ex=""
+model_name1=""
 st.set_page_config("Codex Ultra 2.0")
 with st.sidebar:
     HF_TOKEN=st.text_input("Enter your HuggingFace Token", key='HF_TOKEN!')
