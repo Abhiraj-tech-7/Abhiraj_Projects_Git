@@ -316,8 +316,13 @@ with t3:
         
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
-                res=client.chat_completion(messages=msgs, max_tokens=700, temperature=0.7)
-                reply=res.choices[0].message.content
+            res=client.chat.completions.create(
+                messages=msgs,
+                max_tokens=700,
+                temperature=0.7
+            )
+            
+            reply=res.choices[0].message.content
             st.write(reply)
         
         st.session_state.chat_history.append({"role":"assistant","content":reply})
