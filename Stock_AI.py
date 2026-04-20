@@ -14,8 +14,8 @@ st.set_page_config("Stock AI Predictor", layout="wide")
 st.markdown("<h2 style='text-align:center;'>📈 Stock Price Predictor + AI Assistant</h2>", unsafe_allow_html=True)
 st.markdown("<p style='text-align:center; color:gray;'>Powered by real-time market data & AI</p>", unsafe_allow_html=True)
 
-HF_TOKEN="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"
-SERP_API_KEY="6ff2e871beaffd46ffca7bf6c4007814e1fa27937b662e1408e2fd04d9937b0f"
+HF_TOKEN = st.secrets["HF_TOKEN"]
+SERP_API_KEY = st.secrets["SERP_API_KEY"]
 model_name="Qwen/Qwen2.5-7B-Instruct"
 client=InferenceClient(model=model_name, token=HF_TOKEN)
 
